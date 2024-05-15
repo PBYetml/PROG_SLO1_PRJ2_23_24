@@ -1,0 +1,12 @@
+﻿  infoResistances.c
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoSeries.h(35,53): warning C4091: 'typedef ' : ignoré à gauche de 'e_valSerie' quand aucune variable n'est déclarée
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoSeries.h(36,59): warning C4091: 'typedef ' : ignoré à gauche de 'e_suffixePoidPuissance' quand aucune variable n'est déclarée
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(48,30): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(53,30): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(71,37): warning C4554: '|' : vérifiez si la priorité des opérateurs n'est pas une cause possible d'erreur ; utilisez des parenthèses pour rendre les priorités plus claires
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(71,53): warning C4554: '|' : vérifiez si la priorité des opérateurs n'est pas une cause possible d'erreur ; utilisez des parenthèses pour rendre les priorités plus claires
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(95,55): warning C4554: '&' : vérifiez si la priorité des opérateurs n'est pas une cause possible d'erreur ; utilisez des parenthèses pour rendre les priorités plus claires
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(118,81): warning C4554: '&' : vérifiez si la priorité des opérateurs n'est pas une cause possible d'erreur ; utilisez des parenthèses pour rendre les priorités plus claires
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(162,65): error C2297: « * » : non valide, car l’opérande droit a le type « float * »
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(162,31): error C2198: 'pow' : pas assez d'arguments pour un appel
+C:\Users\taschoulat\Desktop\PROG\TEST1_S2_TCT\TEST1_S2_VOS_INITIALES\infoResistances.c(162,101): error C2440: '=' : impossible de convertir de 'double' en 'float *'
