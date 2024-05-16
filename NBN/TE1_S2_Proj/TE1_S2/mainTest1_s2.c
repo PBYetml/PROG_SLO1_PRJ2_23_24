@@ -18,8 +18,11 @@
 #include <stdio.h>		// flux d'entrée / sortie 
 #include <stdint.h>		// normalisation des types entiers 
 
-//-- librairies personnelles --// 
 
+//-- librairies personnelles --// 
+#include "infoSeries.h"
+#include "infoUser.h"
+#include "infoResistance.h"
 
 //-- définition ou constante --// 
 #define NOM_DEVELOPPEUR "NBN"
@@ -47,7 +50,7 @@ void main()
 	int choixUserSerie, choixPuissanceR; 
 
 	//-- strcuture --//
-	s_serieRX Resistances;  //ResistanceE12, ResistanceE24; 
+	struct s_serieRX Resistances;  //ResistanceE12, ResistanceE24; 
 
 
 	//-- message user --// 

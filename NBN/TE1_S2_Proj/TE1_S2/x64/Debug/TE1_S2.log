@@ -1,0 +1,27 @@
+﻿  infoResistances.c
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(48,30): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(53,30): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(136,22): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(155,3): warning C4033: 'CalculValSerie' doit retourner une valeur
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(154,18): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(169,2): warning C4029: la déclaration de la liste de paramètres formels est différente de la définition
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(171,28): error C2100: indirection non conforme
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(171,51): error C2100: indirection non conforme
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(172,3): error C2100: indirection non conforme
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(172,16): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(175,3): error C2100: indirection non conforme
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoResistances.c(171,39): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+  infoUser.c
+  mainTest1_s2.c
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(117,2): warning C4013: 'AfficherValeurResistance' non défini(e) ; extern retournant int pris par défaut
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(124,16): error C2039: 'choixSerieR' n'est pas membre de 's_serieRX'
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoSeries.h(45): message : voir la déclaration de 's_serieRX'
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(130,16): error C2039: 'choixSerieR' n'est pas membre de 's_serieRX'
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoSeries.h(45): message : voir la déclaration de 's_serieRX'
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(136,16): error C2039: 'choixSerieR' n'est pas membre de 's_serieRX'
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\infoSeries.h(45): message : voir la déclaration de 's_serieRX'
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(148,29): warning C4047: 'fonction' : les niveaux d'indirection de 'int' et de 's_serieRX *' sont différents
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(148,17): warning C4024: 'CalculValSerie' : types différents pour le paramètre formel et réel 1
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(151,32): warning C4047: 'fonction' : les niveaux d'indirection de 'int' et de 's_serieRX *' sont différents
+C:\1_NBN\1_ES\1_PROG\NBN\TE1_S2_Proj\TE1_S2\mainTest1_s2.c(151,20): warning C4024: 'CalculRNormalisee' : types différents pour le paramètre formel et réel 1
+  Génération de code en cours...
