@@ -67,21 +67,23 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 //----------------------------------------------------------------------------------//
 e_validation ControleChoixSerie(char valUser)
 {
-	if (valUser = 6)
+	char six, douze, vingtquatre;
+
+	if (valUser = six)
 	{
-		e_validation choixSerieR = OK;
+		e_validation choixSerieR = true;
 	}
-	if (valUser = 12)
+	if (valUser = douze)
 	{
-		e_validation choixSerieR = OK;
+		e_validation choixSerieR = true;
 	}
-	if (valUser = 24)
+	if (valUser = vingtquatre)
 	{
-		e_validation choixSerieR = OK;
+		e_validation choixSerieR = true;
 	}
 	else
 	{
-		e_validation choixSerieR = NOT_OK;
+		e_validation choixSerieR = false;
 	}
 }
 
