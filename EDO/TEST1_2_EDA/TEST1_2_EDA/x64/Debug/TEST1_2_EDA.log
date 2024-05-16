@@ -1,0 +1,8 @@
+﻿  infoResistances.c
+C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\TEST1_2_EDA\infoSeries.h(17,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\TEST1_2_EDA\infoResistances.c(48,30): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\TEST1_2_EDA\infoResistances.c(53,30): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\TEST1_2_EDA\infoResistances.c(144,43): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\TEST1_2_EDA\infoResistances.c(161,34): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\TEST1_2_EDA\infoResistances.c(177,10): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  TEST1_2_EDA.vcxproj -> C:\EDA\PROG\Test2\EDO\TEST1_2_EDA\x64\Debug\TEST1_2_EDA.exe

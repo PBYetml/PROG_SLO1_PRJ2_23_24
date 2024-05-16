@@ -11,12 +11,11 @@
 // Remarques :          : 
 //----------------------------------------------------------------------------------//
 //-- directive préprocesseur pour supprimer certains warining --//
-#pragma warning(disable : 4996)		//-- warning concernant les scanf
 
 //-- librairires standards --// 
 #include <stdint.h>		// normalisation des types entiers
 #include <stdio.h>		// flux d'entrée/sortie 
-
+#include <math.h>
 
 //-- librairies personnelles --// 
 #include "infoUser.h"
@@ -38,20 +37,20 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 	float displayValeurR; 
 	
 	//-- test en fct du poid de puissance --//
-	if (poidPuissance < CONST_K)
+	if (poidPuissance < CST_K)
 	{
 		displaySuffixe = ' ';
 		displayValeurR = valRBrute; 
 	}
-	else if (poidPuissance < CONST_M)
+	else if (poidPuissance < CST_M)
 	{
 		displaySuffixe = 'k';
-		displayValeurR = valRBrute / pow(10, CONST_K); 
+		displayValeurR = valRBrute / pow(10, CST_K); 
 	}
 	else
 	{
 		displaySuffixe = 'M';
-		displayValeurR = valRBrute / pow(10, CONST_M);
+		displayValeurR = valRBrute / pow(10, CST_M);
 	}
 
 	//-- affichage du message --// 
@@ -66,29 +65,28 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
-	char ControleChoixSerie(int valUser)
+	e_validation ControleChoixSerie(int choixUserSerie)
 {
-	e_validation validationSerie= NOT_OK;
 	
-	switch (valUser)
+	switch (choixUserSerie)
 	{
 	case E6: 
-		e_validation validationSerie = OK;
+		return (OK);
 		break;
 
 	case E12: 
-		e_validation validationSerie = OK;
+		return (OK);
 		break;
 
 	case E24: 
-		e_validation validationSerie = OK;
+		return (OK);
 		break;
 
 	default: 
-		e_validation validationSerie = NOT_OK;
+		printf("la série n'est pas valide");
+		return (NOT_OK);
 		break;
 	}
-	return (validationSerie);
 }
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ControleValR
@@ -98,19 +96,18 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
-char ControleValR(float valUser)
+	e_validation ControleValR(float choixUserValResistance)
 {
-	e_validation validationResistance = NOT_OK;		
 
-	if (valUser >= LIMITE_R_MIN && valUser <= LIMITE_R_MAX)
+	if ((choixUserValResistance >= LIMITE_R_MIN) && (choixUserValResistance <= LIMITE_R_MAX))
 	{
-		e_validation validationResistance = OK;		
+		return (OK);
 	}
 	else
 	{
-		e_validation validationResistance = NOT_OK;		
-	
-	return (validationResistance);
+		printf("la valeur n'est pas correcte");
+		return (NOT_OK);
+	}
 }
 
 //----------------------------------------------------------------------------------//
@@ -121,20 +118,17 @@ char ControleValR(float valUser)
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
-	char ControlePoidPuissanceR(int valUser)
+	e_validation ControlePoidPuissanceR(int choixPuissanceR)
 	{
-		e_validation validadationPuissanceR = NOT_OK;
-
-		if (valUser >= LIMITE_POID_PUISSANCE_MIN && valUser <= LIMITE_POID_PUISSANCE_MAX)
+		if ((choixPuissanceR >= LIMITE_POID_PUISSANCE_MIN) && (choixPuissanceR <= LIMITE_POID_PUISSANCE_MAX))
 		{
-			e_validation validadationPuissanceR = OK;
+			return (OK);
 		}
 		else
 		{
-			e_validation validadationPuissanceR = NOT_OK;
+			printf("la valeur n'est pas correcte");
+			return (NOT_OK);
 		}
-
-		return (validadationPuissanceR);
 	}
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: CalculRUser
@@ -144,9 +138,11 @@ char ControleValR(float valUser)
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 	
-	int CalculeRUser(float valR, int valP)
+	float CalculRUser(float choixUserValResistance, int choixPuissanceR)
 	{
-	
+		float resistanceBrut = 0;
+		resistanceBrut = choixUserValResistance * pow(10, choixPuissanceR);
+		return (resistanceBrut);
 	}
 
 
@@ -158,8 +154,13 @@ char ControleValR(float valUser)
 // Date modfification		: le 07.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
-
-
+	void CalculValSerie(s_serieRX *infoR)
+	{
+		for (char i = 0; i < infoR->choixSerieR; i++)
+		{
+			infoR->resistanceNormalisee = pow(10, (1 / infoR->choixSerieR) * i - 1);
+		}
+	}
 
 
 //----------------------------------------------------------------------------------//
@@ -170,5 +171,8 @@ char ControleValR(float valUser)
 // Date modfification		: le 07.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
-
-
+	void CalculRNormalisee(s_serieRX *infoR)
+	{
+		float rang = 0;
+		rang = log10(pow(infoR->resistanceBrute, infoR->choixSerieR));
+	}

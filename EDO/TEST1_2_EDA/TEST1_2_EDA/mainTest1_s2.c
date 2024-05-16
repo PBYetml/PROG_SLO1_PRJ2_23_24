@@ -43,7 +43,7 @@ void main()
 	float choixUserValResistance; 
 	float tbDecadeE6[E6] = { 0 }, tbDecadeE12[E12] = { 0 }, tbDecadeE24[E24] = { 0 }; 
 
-	double test; 
+	double test =0; 
 	//-- entier --// 
 	int choixUserSerie, choixPuissanceR; 
 
