@@ -1,21 +1,21 @@
 //-----------------------------------------------------------------------------------//
-// Nom du projet 		: Approximation résistance
+// Nom du projet 		: Approximation rï¿½sistance
 // Nom du fichier 		: infoUser.c
-// Date de création 	: 05.03.2022
+// Date de crï¿½ation 	: 05.03.2022
 // Date de modification : xx.xx.202x
 //
 // Auteur 				: Philou (Ph. Bovey)
 //
-// Description          : définition et prototype lié aux série de résistance 
+// Description          : dï¿½finition et prototype liï¿½ aux sï¿½rie de rï¿½sistance 
 //
 //
 // Remarques :          : 
 //----------------------------------------------------------------------------------//
-//-- directive préprocesseur pour supprimer certains warining --//
+//-- directive prï¿½processeur pour supprimer certains warining --//
 #pragma warning(disable : 4996)		//-- warning concernant les scanf
 
 //-- librairires standards --// 
-#include <stdio.h>		// flux d'entrée / sortie 
+#include <stdio.h>		// flux d'entrï¿½e / sortie 
 #include <stdint.h>		// normalisation des types entiers 
 
 //-- librairies personnelles --// 
@@ -23,16 +23,16 @@
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ViderBufferClavier
-// Entrée / Sortie / I/O    : - / - / - 
-// Description				: vide le buffer (flux d'entrée) => ici clavier 
+// Entrï¿½e / Sortie / I/O    : - / - / - 
+// Description				: vide le buffer (flux d'entrï¿½e) => ici clavier 
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 void ViderBufferClavier(void)
 {
-	//-- déclarataion de variable --// 
+	//-- dï¿½clarataion de variable --// 
 
-	//-- itération tant qu'on lit un caractère différents de \n ou EOF, on reste 
+	//-- itï¿½ration tant qu'on lit un caractï¿½re diffï¿½rents de \n ou EOF, on reste 
 	//   dans la boucle
 	while ((getchar() != '\n') && (getchar() != EOF));
 }

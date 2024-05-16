@@ -1,36 +1,37 @@
 //-----------------------------------------------------------------------------------//
-// Nom du projet 		: Approximation résistance
+// Nom du projet 		: Approximation rï¿½sistance
 // Nom du fichier 		: infoResistance.c
-// Date de création 	: 04.03.2022
+// Date de crï¿½ation 	: 04.03.2022
 // Date de modification : 07.03.2022
 //
 // Auteur 				: Philou (Ph. Bovey)
 //
-// Description          : main lié au test 1 semestre 2 PROG (voir données)
+// Description          : main liï¿½ au test 1 semestre 2 PROG (voir donnï¿½es)
 //
 // Remarques :          : 
 //----------------------------------------------------------------------------------//
-//-- directive préprocesseur pour supprimer certains warining --//
+//-- directive prï¿½processeur pour supprimer certains warining --//
 #pragma warning(disable : 4996)		//-- warning concernant les scanf
 
 //-- librairires standards --// 
 #include <stdint.h>		// normalisation des types entiers
-#include <stdio.h>		// flux d'entrée/sortie 
-
+#include <stdio.h>		// flux d'entrï¿½e/sortie 
+#include <math.h>		// pour les fonctions mathÃ©matiques
 
 //-- librairies personnelles --// 
 #include"infoUser.h"
+#include"infoSeries.h"
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: AfficherValeurResistance
-// Entrée / Sortie / I/O    : - / - / - 
-// Description				: calcul la valeur brute de la résistance en ohm 
+// Entrï¿½e / Sortie / I/O    : - / - / - 
+// Description				: calcul la valeur brute de la rï¿½sistance en ohm 
 // Date modfification		: le 06.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 {
-	//-- déclaration de variable --//
+	//-- dï¿½claration de variable --//
 	char displaySuffixe = 0; 
 	float displayValeurR; 
 	
@@ -57,103 +58,92 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 	printf(" est de %3.3f %cohm", displayValeurR, displaySuffixe);
 }
 
-e_validation ControleChoixSerie(int valUser)
-{
-		
-		if (valUser == 6 || 12 || 24)
-		{
-			e_validation = OK;
-		} 
-		else
-		{
-			printf("\n La série n'est pas valide");
-		}
-}
-
-
-e_validation ControleValR(float valUser)
-{
-	if (valUser >= 1 && <= 10)
-	{
-		e_validation = OK;
-	}
-	else
-	{
-		printf("\n La valeur n'est pas correcte");
-	}
-}
-
-e_validation ControlePoidPuissanceR(int valUser)
-{
-	if (valUser <= 0 && >= 6)
-	{
-		e_validation = OK;
-	}
-	else
-	{
-		printf("\n La valeur n'est pas correcte");
-	}
-}
-
-float CalculRUser(float valR, int valP)
-{
-	valR * valP;
-}
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ControleChoixSerie
-// Entrée / Sortie / I/O    : valUser / flagOK / - 
-// Description				: test si la valeur entrée par l'utilisateur est correcte
+// Entrï¿½e / Sortie / I/O    : valUser / flagOK / - 
+// Description				: test si la valeur entrï¿½e par l'utilisateur est correcte
 //							  renvoie un OK, et renvoi un NOT_OK si incorrecte 
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
-
+e_validation ControleChoixSerie(char valUser)
+{
+    if (valUser == E6 || valUser == E12 || valUser == E24)
+    {
+        return OK;
+    } 
+    else
+    {
+        printf("\n La sÃ©rie n'est pas valide");
+        return NOT_OK;
+    }
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ControleValR
-// Entrée / Sortie / I/O    : valUser / flagOK / - 
-// Description				: test si la valeur entrée par l'utilisateur est correcte
+// Entrï¿½e / Sortie / I/O    : valUser / flagOK / - 
+// Description				: test si la valeur entrï¿½e par l'utilisateur est correcte
 //							  renvoie OK, et renvoi un NOT_OK si incorrecte 
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
+e_validation ControleValR(float valUser)
+{
+	if ((valUser > LIMITE_R_MIN) && (valUser < LIMITE_R_MAX))
+	{
+		return OK;
+	}
+	else
+	{
+		printf("\n La valeur n'est pas correcte");
+		return NOT_OK;
+	}
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ControlePoidPuissanceR
-// Entrée / Sortie / I/O    : valUser / flagOK / - 
-// Description				: test si la valeur entrée par l'utilisateur est correcte
+// Entrï¿½e / Sortie / I/O    : valUser / flagOK / - 
+// Description				: test si la valeur entrï¿½e par l'utilisateur est correcte
 //							  renvoie OK, et renvoi un NOT_OK si incorrecte 
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
-
+e_validation ControlePoidPuissanceR(int valUser)
+{
+    if (valUser >= ZERO && valUser <= SIX)
+    {
+        return OK;
+    }
+    else
+    {
+        printf("\n La valeur n'est pas correcte");
+        return NOT_OK;
+    }
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: CalculRUser
-// Entrée / Sortie / I/O    : valR, valP / R_ohm / - 
-// Description				: calcul la valeur brute de la résistance en ohm 
+// Entrï¿½e / Sortie / I/O    : valR, valP / R_ohm / - 
+// Description				: calcul la valeur brute de la rï¿½sistance en ohm 
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
+float CalculRUser(float valR,char valP)
+{
 
+	return (valR * pow(10, valP));
 
-
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: CalculValSerie
-// Entrée / Sortie / I/O    : - / - / infoR 
-// Description				: calcul les différents points de la série choisie 
+// Entrï¿½e / Sortie / I/O    : - / - / infoR 
+// Description				: calcul les diffï¿½rents points de la sï¿½rie choisie 
 // Date modfification		: le 07.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
@@ -163,9 +153,9 @@ float CalculRUser(float valR, int valP)
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: CalculRNormalisee
-// Entrée / Sortie / I/O    : - / - / infoR
-// Description				: calcule de la valeur normalisée par rapport à la 
-//							  résistance brute   
+// Entrï¿½e / Sortie / I/O    : - / - / infoR
+// Description				: calcule de la valeur normalisï¿½e par rapport ï¿½ la 
+//							  rï¿½sistance brute   
 // Date modfification		: le 07.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
