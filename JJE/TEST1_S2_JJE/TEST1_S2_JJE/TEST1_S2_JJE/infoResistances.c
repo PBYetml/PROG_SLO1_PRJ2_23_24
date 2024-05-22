@@ -16,12 +16,11 @@
 //-- librairires standards --// 
 #include <stdint.h>		// normalisation des types entiers
 #include <stdio.h>		// flux d'entrée/sortie 
-
+#include <math.h>
 
 //-- librairies personnelles --// 
 #include "infoSeries.h"
 #include "infoUser.h"
-#include "mainTest1_s2.c"
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: AfficherValeurResistance
@@ -67,24 +66,27 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 //----------------------------------------------------------------------------------//
 e_validation ControleChoixSerie(char valUser)
 {
-	char six, douze, vingtquatre;
+	char six = 6;
+	char douze = 12;
+	char vingtquatre = 24;
 
 	if (valUser = six)
 	{
-		e_validation choixSerieR = true;
+		e_validation choixSerieR = OK;
 	}
 	if (valUser = douze)
 	{
-		e_validation choixSerieR = true;
+		e_validation choixSerieR = OK;
 	}
 	if (valUser = vingtquatre)
 	{
-		e_validation choixSerieR = true;
+		e_validation choixSerieR = OK;
 	}
 	else
 	{
-		e_validation choixSerieR = false;
+		e_validation choixSerieR = NOT_OK;
 	}
+	return;
 }
 
 
@@ -98,15 +100,20 @@ e_validation ControleChoixSerie(char valUser)
 //----------------------------------------------------------------------------------//
 e_validation ControleValR(float valUser)
 {
-	if ((valUser <= 10) || (valUser >= 0))
+	char dix = 10;
+	char zero = 0;
+	char rangResistance = 0;
+
+	if ((valUser <= dix) && (valUser >= zero))
 	{
 		e_validation rangResistance = OK;
 	}
 	else
 	{
-		printf("La valeur itilisée n'est pas correcte \n");
+		printf("La valeur utilisée n'est pas correcte \n");
 		e_validation rangResistance = NOT_OK;
 	}
+	return;
 }
 
 //----------------------------------------------------------------------------------//
@@ -119,15 +126,16 @@ e_validation ControleValR(float valUser)
 //----------------------------------------------------------------------------------//
 e_validation ControlePoidsPuissanceR(char valUser)
 {
-	if ((valUser <= LIMITE_POIDS_PUISSANCE_MAX) || (valUser >= LIMITE_POIDS_PUISSANCE_MIN))
+	if ((valUser <= LIMITE_POIDS_PUISSANCE_MAX) && (valUser >= LIMITE_POIDS_PUISSANCE_MIN))
 	{
 		e_validation poidsPuissanceR = OK;
 	}
 	else
 	{
-		printf("La valeur itilisée n'est pas correcte \n");
+		printf("La valeur utilisée n'est pas correcte \n");
 		e_validation poidsPuissanceR = NOT_OK;
 	}
+	return;
 }
 
 
@@ -140,7 +148,9 @@ e_validation ControlePoidsPuissanceR(char valUser)
 //----------------------------------------------------------------------------------//
 float CalculRUser(float valR, char valP)
 {
-	return valR * 10 ^ valP;
+	char dix = 10;
+
+	return valR * pow(dix, valP);
 }
 
 
