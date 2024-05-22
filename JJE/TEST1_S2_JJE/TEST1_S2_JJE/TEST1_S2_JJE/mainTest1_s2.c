@@ -55,7 +55,7 @@ void main()
 	//-- message user --// 
 	printf("PROJET%d SEMESTRE %d - ANNEE %d - DEVELOPPEUR : %s \n", VERSION_PROJET, SEMESTRE, ANNEE_TEST, NOM_DEVELOPPEUR);
 	
-	//-- itération faire tant que l'utilisateur ne donne pas de bonne information  --// 
+	//-- itération faire tant que l'utilisateur de donner pas de bonne information  --// 
 	do
 	{
 		//-- test sur le choix de la série --// 
