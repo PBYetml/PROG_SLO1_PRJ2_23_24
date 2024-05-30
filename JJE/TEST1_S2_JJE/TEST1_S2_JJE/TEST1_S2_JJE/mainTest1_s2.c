@@ -103,7 +103,7 @@ void main()
 			ViderBufferClavier();
 
 			//-- appel de fonction => test si valeur résistance unitaire est dans les limites --// 
-			validadationPuissanceR = ControlePoidPuissanceR(choixPuissanceR);
+			validadationPuissanceR = ControlePoidsPuissanceR(choixPuissanceR);
 		}
 
 	} while ((validationSerie == NOT_OK) || (validationResistance == NOT_OK) || (validadationPuissanceR == NOT_OK));
@@ -141,7 +141,7 @@ void main()
 			break; 
 	}
 	//-- MAJ de la structure avec la notion de puissance de 10^x --// 
-	Resistances.poidPuissanceR = choixPuissanceR; 
+	Resistances.poidsPuissanceR = choixPuissanceR; 
 
 	//-- calcul des points de série --//
 	CalculValSerie(&Resistances); 
@@ -151,5 +151,5 @@ void main()
 	
 	//-- appel de fonction => afficher la valeur de la résistance avec le suffixe de puissance (-, k, M)
 	printf("\nla valeur normalisee");
-	AfficherValeurResistance(Resistances.resistanceNormalisee, Resistances.poidPuissanceR);
+	AfficherValeurResistance(Resistances.resistanceNormalisee, Resistances.poidsPuissanceR);
 }
