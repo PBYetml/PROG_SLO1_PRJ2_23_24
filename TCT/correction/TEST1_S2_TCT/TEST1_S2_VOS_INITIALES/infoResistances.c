@@ -159,8 +159,12 @@ float CalculRUser(float valR,int valP)
 //----------------------------------------------------------------------------------//
 void calculCalSerie(s_serieRX *infoR)
 {
-	infoR->pt_tbApproximation = (pow(10, ((1 / infoR->choixSerieR) * (infoR->pt_tbApproximation - 1))));
-	
+	char i;
+	for (i = 0; i < infoR->choixSerieR; i++)
+	{
+		infoR->pt_tbApproximation[i] = (pow(10, ((1 / infoR->choixSerieR) * (infoR->pt_tbApproximation[i] - 1))));
+	}
+
 }
 
 
