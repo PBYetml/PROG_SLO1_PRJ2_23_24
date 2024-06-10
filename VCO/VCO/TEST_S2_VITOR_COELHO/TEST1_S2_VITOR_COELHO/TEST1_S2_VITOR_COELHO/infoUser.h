@@ -1,12 +1,12 @@
 //-----------------------------------------------------------------------------------//
-// Nom du projet 		: Approximation résistance
+// Nom du projet 		: Approximation rï¿½sistance
 // Nom du fichier 		: infoUser.h
-// Date de création 	: 05.03.2022
+// Date de crï¿½ation 	: 05.03.2022
 // Date de modification : xx.xx.202x
 //
 // Auteur 				: Philou (Ph. Bovey)
 //
-// Description          : définition et prototype lié aux série de résistance 
+// Description          : dï¿½finition et prototype liï¿½ aux sï¿½rie de rï¿½sistance 
 //
 //
 // Remarques :          : 
@@ -14,7 +14,7 @@
 #ifndef INFO_USER
 #define INFO_USER
 
-//-- déclaration énumération --// 
+//-- dï¿½claration ï¿½numï¿½ration --// 
 typedef enum
 {
 	NOT_OK, 
@@ -22,7 +22,7 @@ typedef enum
 }e_validation;
 
 
-//-- déclaration de prototype --// 
+//-- dï¿½claration de prototype --// 
 void ViderBufferClavier(void);
 
 
