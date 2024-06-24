@@ -1,0 +1,7 @@
+﻿  mainTest1_s2.c
+C:\Users\jerjeanelie\Documents\GitHub\PROG_SLO1_PRJ2_23_24\JJE\TEST1_S2_JJE\TEST1_S2_JJE\TEST1_S2_JJE\mainTest1_s2.c(116,2): warning C4013: 'AfficherValeurResistance' non défini(e) ; extern retournant int pris par défaut
+C:\Users\jerjeanelie\Documents\GitHub\PROG_SLO1_PRJ2_23_24\JJE\TEST1_S2_JJE\TEST1_S2_JJE\TEST1_S2_JJE\mainTest1_s2.c(47,9): warning C4101: 'test' : variable locale non référencée
+C:\Users\jerjeanelie\Documents\GitHub\PROG_SLO1_PRJ2_23_24\JJE\TEST1_S2_JJE\TEST1_S2_JJE\TEST1_S2_JJE\mainTest1_s2.c(45,8): warning C4101: 'valFinale' : variable locale non référencée
+  TEST1_S2_JJE.vcxproj -> C:\Users\jerjeanelie\Documents\GitHub\PROG_SLO1_PRJ2_23_24\JJE\TEST1_S2_JJE\TEST1_S2_JJE\x64\Debug\TEST1_S2_JJE.exe
+  'pwsh.exe' n'est pas reconnu en tant que commande interne
+  ou externe, un programme exécutable ou un fichier de commandes.

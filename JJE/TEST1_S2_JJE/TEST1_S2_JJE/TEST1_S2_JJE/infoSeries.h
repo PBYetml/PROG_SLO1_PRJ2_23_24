@@ -14,7 +14,7 @@
 #ifndef INFO_SERIE
 #define INFO_SERIE 
 
-//-- librairies itilisées --//
+//-- librairies utilisées --//
 #include <stdint.h>
 #include "infoUser.h"
 
@@ -31,25 +31,38 @@
 typedef enum {E6 = 6, E12 = 12, E24 = 24} e_valSerie;
 typedef enum {CST_K = 3, CST_M = 6} e_suffixePoidsPuissance;
 
-//-- déclaration de structeur --// 
+//-- déclaration de structure --// 
 typedef struct
 {
 	char	choixSerieR;			//Valeur de 0 à 100
 	char	rangResistance;			//Valeur de 0 à 100
 	char	poidsPuissanceR;		//Valeur de 0 à 10
-	float	pt_tbApproximation;		//Récupère les valeurs d'un tableau afin de les itiliser
+	float	*pt_tbApproximation; 	//Récupère les valeurs d'un tableau afin de les utiliser
 	float	resistanceBrute;
 	float	resistanceNormalisee;
 }s_serieRX;
 
 //-- déclaration de prototype --// 
-					// controle de la série E6, E12, E24... 
+					// controle de la série E6, E12, E24...
+					e_validation ControleChoixSerie(char valUser);
+
 					// contrôle de la valeur unitaire de la résistance 
+					e_validation ControleValR(float valUser);
+
 					// contrôle du puissance de puissance en base 10
+					e_validation ControlePoidsPuissanceR(char valUser);
+
 					// calcul la résistance brute de l'utilsateur
+					float CalculRUser(float valR, char valP);
+
 					// affichage de la valeur de résistance avec suffixe -, k, M
+					
+
 					// calcul de la série de résistance 
+					void CalculValSerie();
+
 					// calcul la valeur normalisée de R
+					void CalculRNormalisee();
 
 #endif // !INFO_SERIE
 
