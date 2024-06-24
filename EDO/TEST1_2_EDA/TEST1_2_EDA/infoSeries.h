@@ -14,10 +14,7 @@
 #ifndef INFO_SERIE
 #define INFO_SERIE 
 
-//-- librairies utilisées --//
-#include <stdint.h>
-#include "infoUser.h"
-
+#include "infoUser.h";
 //-- déclaration des constantes ou de définition --// 
 #define LIMITE_R_MIN 1.00
 #define LIMITE_R_MAX 10.00
@@ -26,26 +23,22 @@
 
 #define MSG_BRUTE "brute"
 #define MSG_NORMALISEE "normalisee"
-#define E6 6
-#define E12 12
-#define E24 24
-#define CST_K 3
-#define CST_M 6
 
 //-- déclaration énumération --// 
 typedef enum //enum pour serie resistance
 {
-	E6, E12, E24
+	E6 = 6, E12 = 12, E24 = 24
 }e_valSerie;
 
 typedef enum //enum pour puissance
 {
-	CST_K, CST_M
+	CST_K = 3, CST_M = 6
 }e_suffixePoidPuissance;
+
 //-- déclaration de structeur --// 
 typedef struct
 {
-	char choiSerieR;
+	char choixSerieR;
 	char rangResistance;
 	char poidPuissanceR;
 	float *pt_tbApproximation;
@@ -54,14 +47,13 @@ typedef struct
 }s_serieRX;
 
 //-- déclaration de prototype --// 
-char ControleChoixSerie(int valUser);					// controle de la série E6, E12, E24... 
-char ControleValR(float valUser);						// contrôle de la valeur unitaire de la résistance 
-char ControlePoidPuissanceR(int valUser);				// contrôle du puissance de puissance en base 10
-					// calcul la résistance brute de l'utilsateur
-					// affichage de la valeur de résistance avec suffixe -, k, M
-					// calcul de la série de résistance 
-					// calcul la valeur normalisée de R
-
+e_validation ControleChoixSerie(int choixUserSerie);					// controle de la série E6, E12, E24... 
+e_validation ControleValR(float choixUserValResistance);				// contrôle de la valeur unitaire de la résistance 
+e_validation ControlePoidPuissanceR(int choixPuissanceR);				// contrôle du puissance de puissance en base 10
+float CalculRUser(float choixUserValResistance, int choixPuissanceR);	// calcul la résistance brute de l'utilsateur
+void CalculValSerie(s_serieRX *infoR);													// calcul de la série de résistance										
+void CalculRNormalisee(s_serieRX *infoR);												// calcul la valeur normalisée de R
+void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance);	// affichage de la valeur de résistance avec suffixe -, k, M						
 #endif // !INFO_SERIE
 
 

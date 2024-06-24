@@ -20,9 +20,7 @@ typedef enum
 	NOT_OK, OK
 }e_validation;
 
-
 //-- déclaration de prototype --// 
 void ViderBufferClavier(void);
-
 
 #endif // !INFO_USER
