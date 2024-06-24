@@ -1,0 +1,2 @@
+﻿mainTest1_s2.obj : error LNK2019: symbole externe non résolu CalculValSerie référencé dans la fonction main
+C:\Users\taschoulat\Documents\GitHub\PROG_SLO1_PRJ2_23_24\TCT\correction\TEST1_S2_TCT\x64\Debug\TEST1_S2_VOS_INITIALES.exe : fatal error LNK1120: 1 externes non résolus
