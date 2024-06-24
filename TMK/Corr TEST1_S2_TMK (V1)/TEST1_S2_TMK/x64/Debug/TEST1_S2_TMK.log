@@ -1,0 +1,58 @@
+﻿  infoResistances.c
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\infoResistances.c(23,10): fatal error C1083: Impossible d'ouvrir le fichier include : 'infos' : No such file or directory
+  infoUser.c
+  mainTest1_s2.c
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\infoSeries.h(33,1): warning C4005: 'enum' : redéfinition de macro
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\infoSeries.h(31): message : voir la définition précédente de 'enum'
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,21): error C2065: 'E6' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,19): error C2057: expression constante attendue
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,21): error C2466: impossible d'allouer un tableau de taille constante 0
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,47): error C2065: 'E12' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,44): error C2057: expression constante attendue
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,47): error C2466: impossible d'allouer un tableau de taille constante 0
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,73): error C2065: 'E24' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,70): error C2057: expression constante attendue
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(44,73): error C2466: impossible d'allouer un tableau de taille constante 0
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(51,12): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'Resistances'
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(51,23): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(73,22): warning C4013: 'ControleChoixSerie' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(89,27): warning C4013: 'ControleValR' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(105,29): warning C4013: 'ControlePoidPuissanceR' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(111,13): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(111,14): error C2224: la partie gauche de '.resistanceBrute' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(111,32): warning C4013: 'CalculRUser' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(115,2): warning C4013: 'AfficherValeurResistance' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(115,38): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(115,39): error C2224: la partie gauche de '.resistanceBrute' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(120,10): error C2065: 'E6' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(122,15): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(122,16): error C2224: la partie gauche de '.choixSerieR' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(122,32): error C2065: 'E6' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(123,15): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(123,16): error C2224: la partie gauche de '.pt_tbApproximation' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(126,11): error C2065: 'E12' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(128,15): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(128,16): error C2224: la partie gauche de '.choixSerieR' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(128,33): error C2065: 'E12' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(129,15): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(129,16): error C2224: la partie gauche de '.pt_tbApproximation' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(132,11): error C2065: 'E24' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(134,15): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(134,16): error C2224: la partie gauche de '.choixSerieR' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(134,33): error C2065: 'E24' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(135,15): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(135,16): error C2224: la partie gauche de '.pt_tbApproximation' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(143,13): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(143,14): error C2224: la partie gauche de '.poidPuissanceR' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(146,2): warning C4013: 'CalculValSerie' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(146,29): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(149,2): warning C4013: 'CalculRNormalisee' non défini(e) ; extern retournant int pris par défaut
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(149,32): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(153,38): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(153,39): error C2224: la partie gauche de '.resistanceNormalisee' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(153,72): error C2065: 'Resistances' : identificateur non déclaré
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(153,73): error C2224: la partie gauche de '.poidPuissanceR' doit avoir un type struct/union
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(120,1): error C2051: l'expression associée à case n'est pas une constante
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(126,1): error C2051: l'expression associée à case n'est pas une constante
+C:\Users\thomlynek\OneDrive - Education Vaud\Corrections PROG\TEST1_S2_TMK\TEST1_S2_TMK\mainTest1_s2.c(132,1): error C2051: l'expression associée à case n'est pas une constante
+  Génération de code en cours...
