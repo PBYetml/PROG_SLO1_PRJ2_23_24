@@ -16,10 +16,13 @@
 //-- librairires standards --// 
 #include <stdint.h>		// normalisation des types entiers
 #include <stdio.h>		// flux d'entrée/sortie 
+#include <math.h>
 
 
 //-- librairies personnelles --// 
-
+#include "infoSeries.h"
+#include "infoUser.h"
+#include "infoResistance.h"
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: AfficherValeurResistance
 // Entrée / Sortie / I/O    : - / - / - 
@@ -30,19 +33,19 @@
 void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 {
 	//-- déclaration de variable --//
-	char displaySuffixe = 0; 
-	float displayValeurR; 
-	
+	char displaySuffixe = 0;
+	float displayValeurR;
+
 	//-- test en fct du poid de puissance --//
 	if (poidPuissance < CONST_K)
 	{
 		displaySuffixe = ' ';
-		displayValeurR = valRBrute; 
+		displayValeurR = valRBrute;
 	}
 	else if (poidPuissance < CONST_M)
 	{
 		displaySuffixe = 'k';
-		displayValeurR = valRBrute / pow(10, CONST_K); 
+		displayValeurR = valRBrute / pow(10, CONST_K);
 	}
 	else
 	{
@@ -63,7 +66,19 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
+int ControleChoixSerie(int valUser)
+{
 
+	if ((valUser == E6) || (valUser == E12) || (valUser == E24))
+	{
+		return OK;
+	}
+	else
+	{
+		printf("\nLa serie n'est pas valide");
+		return NOT_OK;
+	}
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ControleValR
@@ -74,6 +89,18 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
+int ControleValR(float valUser)
+{
+	if ((valUser >= 0) && (valUser <= 10))
+	{
+		return OK;
+	}
+	else
+	{
+		printf("\nLa valeur n'est pas correct");
+		return NOT_OK;
+	}
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ControlePoidPuissanceR
@@ -84,7 +111,18 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
-
+int ControlePoidPuissanceR(int valUser)
+{
+	if ((valUser >= 0) && (valUser <= 6))
+	{
+		return OK;
+	}
+	else
+	{
+		printf("\nLa valeur n'est pas correct");
+		return NOT_OK;
+	}
+}
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: CalculRUser
@@ -93,7 +131,12 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Date modfification		: le 05.03.2022
 // Remarque					: -
 //----------------------------------------------------------------------------------//
+float CalculRUser(float valR, int valP)
+{
+	float result = valR * pow(10, valP);
 
+	return result;
+}
 
 
 
@@ -106,7 +149,11 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
-
+ int CalculValSerie(int infoR)
+{
+	 float result = pow(10, (1 - 0.1 * infoR)); // Calcul selon la formule donnée R1% = 10^(1-0.1n)
+	 return;
+}
 
 
 //----------------------------------------------------------------------------------//
@@ -118,4 +165,12 @@ void AfficherValeurResistance(float valRBrute, uint8_t poidPuissance)
 // Remarque					: -
 //----------------------------------------------------------------------------------//
 
+ int CalculRNormalisee(int infoR, int s_SerieRX)
+ {
+	 // Calcul de la nouvelle valeur normalisée
+	 float valeurNormalisee = *s_SerieRX * pow(10, -(*infoR));
+	 *s_SerieRX = valeurNormalisee;  // Mettre à jour la valeur dans la variable originale
 
+
+	 *infoR = (int)log10(valeurNormalisee);
+ }

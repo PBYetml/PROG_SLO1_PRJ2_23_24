@@ -29,14 +29,14 @@
 
 //-- déclaration énumération --// 
 typedef enum {
-	E6,
-	E12,
-	E24
+	E6 = 6,
+	E12 = 12,
+	E24 = 24
 }e_valSerie;
 
 typedef enum {
-	CST_K,
-	CST_M
+	CONST_K = 3,
+	CONST_M = 6
 }e_suffixePoidPuissance;
 
 //-- déclaration de structeur --// 
@@ -44,12 +44,12 @@ typedef enum {
 // Définition d'une structure Personne
 struct s_serieRX
 {
-	char choixserie;
-	char rangR;
+	char choixserieR;
+	char rangResistance;
 	short poidPuissanceR;
 	float *pt_tbApproximation;
-	float RUser
-	float RNormalisee
+	float resistanceBrute;
+	float resistanceNormalisee;
 
 
 };

@@ -19,7 +19,9 @@
 #include <stdint.h>		// normalisation des types entiers 
 
 //-- librairies personnelles --// 
+#include "infoSeries.h"
 #include "infoUser.h"
+#include "infoResistance.h"
 
 //----------------------------------------------------------------------------------//
 // Nom de la fonction		: ViderBufferClavier

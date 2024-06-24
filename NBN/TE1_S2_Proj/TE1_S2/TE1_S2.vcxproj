@@ -19,14 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\TEST1_S2\infoResistances.c" />
-    <ClCompile Include="..\..\TEST1_S2\infoUser.c" />
-    <ClCompile Include="..\..\TEST1_S2\mainTest1_s2.c" />
+    <ClCompile Include="infoResistances.c" />
+    <ClCompile Include="infoUser.c" />
+    <ClCompile Include="mainTest1_s2.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\TEST1_S2\infoSeries.h" />
-    <ClInclude Include="..\..\TEST1_S2\infoUser.h" />
     <ClInclude Include="infoResistance.h" />
+    <ClInclude Include="infoSeries.h" />
+    <ClInclude Include="infoUser.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

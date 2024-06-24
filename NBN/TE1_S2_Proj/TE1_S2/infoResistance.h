@@ -23,4 +23,4 @@ float CalculRUser(float valR, int valP); //calcul la valeur brute de la résistan
 
 int CalculValSerie(int infoR); //calcul les différents points de la série choisie 
 
-int CalculRNormalisee(int infoR) //calcule de la valeur normalisée par rapport à la
+int CalculRNormalisee(int infoR); //calcule de la valeur normalisée par rapport à la
